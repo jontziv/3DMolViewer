@@ -1,0 +1,14 @@
+biotite
+ipywidgets
+ipython_genutils
+Bio
+streamlit
+stmol
+py3Dmol
+ipython_genutils
+py3Dmol
+ipyspeck
+ipywidgets
+streamlit
+ipython_genutils
+st-speckmol
