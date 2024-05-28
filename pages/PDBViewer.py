@@ -1,17 +1,8 @@
-import streamlit as st
 import py3Dmol
-from stmol import showmol
 import streamlit as st
 from stmol import showmol
-import py3Dmol
-import requests
-import biotite.structure.io as bsio
-import stmol
-import py3Dmol
-import glob 
-from st_speckmol import speck_plot 
-from stmol import showmol,render_pdb,render_pdb_resn
-import os
+
+
 
 st.sidebar.markdown('''
     
@@ -25,8 +16,16 @@ pdb_code = st.sidebar.text_input(
         label="PDB Code",
         value="1HQR",
     )
-style = st.selectbox('style',['cartoon','line','cross','stick','sphere'])
+multi = '''Welcome to PDB Viewer,
+here you can provide your PDB code to the sidebar to your left and adjust visualisation preferences.
 
+Once you enter the PDB code, it will display the visualisation of the molecule on the top chart.
+
+In the dropdowns you can specify a protein which will be added to the PDB you selected, this is displayed in the bottom chart.
+
+In the second dropdown you can specify what how the molecule is rendered, eg cartoon, sticks etc.
+'''
+st.markdown(multi)
 resi_list = st.sidebar.multiselect(label="Highlight Residues",options=list(range(1,5000)))
 
 chain = st.sidebar.text_input(label="Highlight Chain",value="A")

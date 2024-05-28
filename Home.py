@@ -1,17 +1,13 @@
-from streamlit_navigation_bar import st_navbar
 import streamlit as st
-import streamlit as st
-import py3Dmol
-import requests
-import biotite.structure.io as bsio
-from stmol import *
+from st_speckmol import speck_plot 
+from stmol import showmol,render_pdb,render_pdb_resn
 
-st.set_page_config(page_title="Stmol", page_icon="🧬",layout="wide",initial_sidebar_state="auto")
-st.sidebar.markdown('''
-    Placeholder
-    ''')  
-with open(f'README.md', 'r') as f:           
-    st.markdown(f.read(),unsafe_allow_html=True)
 
+obj = render_pdb(id = '1A2C')
+obj = render_pdb_resn(obj ,resn_lst = ['ALA',])
+showmol(obj,height = 800,width=800)
+                                                                    
+
+                    
 
 
