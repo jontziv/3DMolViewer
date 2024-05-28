@@ -8,3 +8,4 @@ ipyspeck
 streamlit
 st-speckmol
 requests
+biotite
