@@ -7,3 +7,4 @@ py3Dmol
 ipyspeck
 streamlit
 st-speckmol
+requests
